@@ -18,6 +18,14 @@
 </p>
 <br/>
 
+## :card_index_dividers: Índice de diretórios
+
+[0. Diretório de Imagens usadas no Markdown](https://github.com/pauloangelodb/LDS-Lab01/tree/main/assets/images)
+
+[1. Diretório de Projeto ](https://github.com/pauloangelodb/LDS-Lab01/tree/main/projects)
+
+[2. Diretório de Implementação ](https://github.com/pauloangelodb/LDS-Lab01/tree/main/implementation)
+
 ## 🚀 Descrição do Sistema
 
 <p align="center">
