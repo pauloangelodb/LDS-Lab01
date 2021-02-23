@@ -1,6 +1,6 @@
 # LDS-Lab01
 
-Sistema de Matrículas
+# Sistema de Matrículas
 Neste laboratório, vamos projetar um Sistema de Matrículas para uma Universidade. Leia atentamente a descrição fornecida pelo Product Owner e elabore o projeto detalhado do sistema.
 
 # Descrição do Sistema:
@@ -21,7 +21,6 @@ Os professores podem acessar o sistema para saber quais são os alunos que estã
 Todos os usuários do sistema têm senhas que são utilizadas para validação do respectivo login.
 
 # Relatório Final:
-
 Elabore um documento que apresente o projeto desenvolvido, de acordo com o template fornecido na disciplina. O protótipo deverá ser apresentado em aula ao final da Sprint 04.
 
 # Processo de Desenvolvimento:
