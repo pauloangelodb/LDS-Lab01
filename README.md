@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <h1 align="center">
     <img alt="GoStack" src="assets/images/logoPUC.png" width="200px" />
 </h1>
