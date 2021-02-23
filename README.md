@@ -16,8 +16,6 @@
   <img alt="License" src="https://img.shields.io/badge/license-MIT-%2304D361">	
 	
 </p>
-
-<hr>
 <br/>
 
 ## 🚀 Descrição do Sistema
@@ -74,6 +72,4 @@ Elabore um documento que apresente o projeto desenvolvido, de acordo com o templ
 ## :memo: Licença
 
 Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
-
----
 
