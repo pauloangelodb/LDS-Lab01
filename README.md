@@ -9,7 +9,7 @@
 <p align="center">Workspace do primeiro modulo, da disciplina de Laboratório de Desenvolvimento De Software 🎓</p>
 
 <p align="center">
-  <a href="https://github.com/pauloangelodb/LDS-Lab01/main">
+  <a href="https://github.com/pauloangelodb/LDS-Lab01/commits/main">
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/pauloangelodb/LDS-Lab01">
   </a>
 
