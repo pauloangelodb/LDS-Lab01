@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <h1 align="center">
     <img alt="GoStack" src="assets/images/logoPUC.png" width="200px" />
 </h1>
@@ -76,3 +77,4 @@ Elabore um documento que apresente o projeto desenvolvido, de acordo com o templ
 Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
 ---
+
