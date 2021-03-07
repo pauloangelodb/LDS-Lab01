@@ -3,10 +3,10 @@
 </h1>
 
 <h3 align="center">
-  Projeto
+  Implementação
 </h3>
 
-<p align="center">Diretório de projeto onde está contido os Diagramas UML do sistema</p>
+<p align="center">Diretório de implementaçã onde está contido o código do Sistema</p>
 
 <p align="center">
     <a href="https://github.com/pauloangelodb/LDS-Lab01/main">
@@ -23,7 +23,7 @@
    
 ## ℹ️ Informações extras
 
-Diretório da fase de projeto do sistema.
+Diretório da fase de implementação do projeto.
 
 ## :memo: Licença
 
