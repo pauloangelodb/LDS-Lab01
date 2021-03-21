@@ -16,21 +16,14 @@ public class Disciplina{
     
   }
 
-  public String getNome(){
-    return nome;
-  }
+  public String getNome(){ return nome; } 
+  public boolean getOptativa(){ return optativa; } 
+  public ArrayList<Integer> getMatriculaAlunos(){ return alunosMatriculados; }
+  public int getID(){ return id; }
 
-  public boolean getOptativa(){
-    return optativa;
-  }
-
-  public ArrayList<Integer> getMatriculaAlunos(){
-    return alunosMatriculados;
-  }
-
-  public int getID(){
-    return id;
-  }
+  public void setNome(String nome) { this.nome = nome; }
+  public void setOptativa(boolean optativa) { this.optativa = optativa; }
+  public void setID(int id) { this.id = id; }
 
   public boolean inserirAluno(int matricula){
     if(vagas > 0){

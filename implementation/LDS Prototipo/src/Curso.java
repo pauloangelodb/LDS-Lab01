@@ -12,9 +12,9 @@ public class Curso{
   private ArrayList<Disciplina> disciplinas;
 
   public Curso(String nome, int creditos, int id){
-    this.nome = nome;
-    this.creditos = creditos;
-    this.id = id;
+    this.setNome(nome);
+    this.setCreditos(creditos);
+    this.setID(id);
   }
 
   public String getNome(){ return nome; }
@@ -55,8 +55,4 @@ public class Curso{
       System.out.println("- "+disciplina.getNome());
     }
   }
-
-  
-
-
-} 
+}
