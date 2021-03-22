@@ -7,8 +7,8 @@ public class Curso{
   private String nome;
   private int creditos;
   private int id;
-  private Date inicioMatricula;
-  private Date fimMatricula;
+  private LocalDate inicioMatricula;
+  private LocalDate fimMatricula;
   private ArrayList<Disciplina> disciplinas;
 
   public Curso(String nome, int creditos, int id){
@@ -20,8 +20,8 @@ public class Curso{
   public String getNome(){ return nome; }
   public int getCreditos(){ return creditos; }
   public int getId(){ return id; }
-  public Date getInicioMatricula() { return inicioMatricula; }
-  public Date getFimMatricula() { return fimMatricula; }
+  public LocalDate getInicioMatricula() { return inicioMatricula; }
+  public LocalDate getFimMatricula() { return fimMatricula; }
   public ArrayList<Disciplina> getDisciplinas(){ return disciplinas; }
 
   public void setNome(String nome) { this.nome = nome; }
@@ -32,7 +32,7 @@ public class Curso{
     return (disciplinas.add(disciplina));
   }
 
-  public void definirPeriodoMatricula(Date inicio, Date fim){
+  public void definirPeriodoMatricula(LocalDate inicio, LocalDate fim){
     if(inicio.compareTo(fim) <= 0){
       inicioMatricula = inicio;
       fimMatricula = fim;
@@ -42,11 +42,15 @@ public class Curso{
     }
   }
 
-  public void matricularAlunoDisciplina(Integer matriculaAluno, int idDisciplina){
-    //verofocar se está na data de matricula
+  public void matricularAlunoDisciplina(int matriculaAluno, int idDisciplina){
+    //verificar se está na data de matricula
+    if(LocalDate.now().compareTo(this.fimMatricula) <= 0){
       // verificar se a disciplina existe
-        //se existe matricular (discipla.inserirAluno(matriculaAluno))
-    
+      if(disciplina.getID() != null){
+        //se existe matricular
+        disciplina.inserirAluno(matriculaAluno);
+      }
+    }
   }
 
   public void listarDisciplinas(){

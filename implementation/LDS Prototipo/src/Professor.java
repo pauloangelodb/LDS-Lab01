@@ -11,15 +11,8 @@ public class Professor extends Usuario {
     }
 
     //Professor consulta os nomes dos alunos cadastrados em uma disciplina
-    public ArrayList<String> consultar (Disciplina disciplina) {
+    public ArrayList<Integer> consultar (Disciplina disciplina) {
         
-        ArrayList<String> alunos = new ArrayList<String>();
-
-        /* IMPLEMENTAR CHAMADAS DA CLASSE DISCILINA */
-        for(int i = 0; i <= disciplina.alunos.size(); i++){
-            alunos.add(i, disciplina.alunos.getNome());
-        }
-
-        return alunos;
+        return disciplina.getMatriculaAlunos();
     }
 }

@@ -13,7 +13,7 @@ public class Aluno extends Usuario {
     public void matricular(int idDisciplina) {
 
         /* IMPLEMENTAR CHAMADA DA CLASSE CURSO */
-        curso.matricular(this.getMatricula(), idDisciplina);
+        curso.matricularAlunoDisciplina(this.getMatricula(), idDisciplina);
 
     }
 
