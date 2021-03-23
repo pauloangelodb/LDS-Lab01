@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 
 public class Professor extends Usuario {
+
+    private ArrayList<Disciplina> disciplinasLecionadas;
     
     //Construtor da classe Professor
     public Professor(int matricula, String senha, String nome, int origem) {
@@ -11,8 +13,11 @@ public class Professor extends Usuario {
     }
 
     //Professor consulta os nomes dos alunos cadastrados em uma disciplina
-    public ArrayList<Integer> consultar (Disciplina disciplina) {
-        
-        return disciplina.getMatriculaAlunos();
+    public void consultar (Disciplina disciplina) {
+        disciplina.getAlunosMatriculados();
+    }
+
+    public void addDisciplinaLecionada(Disciplina disciplina){ 
+        disciplinasLecionadas.add(disciplina);
     }
 }

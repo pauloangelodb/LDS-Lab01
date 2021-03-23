@@ -1,7 +1,5 @@
-import java.lang.reflect.Array;
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
 
 public class Curso{
   private String nome;
@@ -42,21 +40,36 @@ public class Curso{
     }
   }
 
-  public void matricularAlunoDisciplina(int matriculaAluno, int idDisciplina){
+  public void matricularAlunoDisciplina(Aluno aluno, int idDisciplina){
     //verificar se está na data de matricula
     if(LocalDate.now().compareTo(this.fimMatricula) <= 0){
-      // verificar se a disciplina existe
-      if(disciplina.getID() != null){
-        //se existe matricular
-        disciplina.inserirAluno(matriculaAluno);
-      }
+      //Buscar a disciplina que o aluno será matriculado;
+      int indiceDisciplina = buscarIndiceDisciplina(idDisciplina);
+
+      //matricular na disciplina
+      disciplinas.get(indiceDisciplina).inserirAluno(aluno);
     }
+    
   }
+  
 
   public void listarDisciplinas(){
     System.out.println("Disciplinas do curso de "+nome+":");
     for (Disciplina disciplina : disciplinas) { 
       System.out.println("- "+disciplina.getNome());
     }
+  }
+
+  public int buscarIndiceDisciplina(Integer idDisciplina){
+    //Busca a disciplina passada por parametro na lista de disciplina, caso não encontre retorna nullo
+    Disciplina disciplinaBuscada = disciplinas.stream().filter(disciplina -> idDisciplina.equals(disciplina.getID()))
+    .findAny()
+    .orElse(null);
+
+    if(disciplinaBuscada == null){
+      throw new Error("Erro: a disciplina buscada não existe!");
+    }
+    
+    return(disciplinas.indexOf(disciplinaBuscada));
   }
 }
