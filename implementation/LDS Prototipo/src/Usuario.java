@@ -6,7 +6,7 @@ public class Usuario {
     private int matricula;              //Número de matrícula
     private String senha;               //Senha cadastrada pala login
     private String nome;                //Nome do usuário
-    private int origem;                 //0 = erro, 1 = professor, 2 = aluno
+    private int origem;                 //0 = logoff, 1 = secretaria, 2 = professor, 3 = aluno
     private ArrayList<Integer> disciplinas = new ArrayList<Integer>();   //Disciplinas em que está vinculado
 
     public int getMatricula() { return this.matricula; }

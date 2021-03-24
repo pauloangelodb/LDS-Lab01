@@ -52,11 +52,18 @@ public class Curso{
     
   }
   
+  public void cancelarMatricula(Aluno aluno, int idDisciplina) {
+    //Buscar a disciplina que o aluno será desmatriculado;
+    int indiceDisciplina = buscarIndiceDisciplina(idDisciplina);
+
+    //matricular na disciplina
+    disciplinas.get(indiceDisciplina).removerAluno(aluno);
+  }
 
   public void listarDisciplinas(){
     System.out.println("Disciplinas do curso de "+nome+":");
     for (Disciplina disciplina : disciplinas) { 
-      System.out.println("- "+disciplina.getNome());
+      System.out.println("- "+disciplina.getNome()+"\n");
     }
   }
 
@@ -72,4 +79,5 @@ public class Curso{
     
     return(disciplinas.indexOf(disciplinaBuscada));
   }
+
 }

@@ -15,18 +15,17 @@ public class Aluno extends Usuario {
         this.setOrigem(origem);
     }
 
-    public void matricular(int idDisciplina) {
+    public void matricular(Curso curso, Disciplina disciplina) {
 
-        /* IMPLEMENTAR CHAMADA DA CLASSE CURSO */
-        curso.matricularAlunoDisciplina(this.getMatricula(), idDisciplina);
+        curso.matricularAlunoDisciplina(this, disciplina.getID());
         //apos matricular na disciplina, inserir a disciplina nas "Disciplinas em curso pelo aluno"
+        disciplinasEmCurso.add(disciplina);
 
     }
 
-    public void cancelarMatricula(int idDisciplina) {
+    public void cancelarMatricula(Curso curso, int idDisciplina) {
 
-        /* IMPLEMENTAR CHAMADA DA CLASSE CURSO */
-        curso.cancelarMatricula(this.getMatricula(), idDisciplina);
+        curso.cancelarMatricula(this, idDisciplina);
     }
 
     public void addDisciplinaHistorico(Disciplina disciplina){

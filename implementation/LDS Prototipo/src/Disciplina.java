@@ -51,9 +51,9 @@ public class Disciplina{
     if(professor == null){
       this.professor = professor;
     }else{
-      //Já existe professor da disciplina.
-    }   
-  
+      //Retorna mensagem de erro:
+      System.out.println("Já existe professor da disciplina.");
+    }
   }
 
   public boolean inserirAluno(Aluno aluno) {
@@ -65,6 +65,10 @@ public class Disciplina{
     return false;
   }
 
+  public void removerAluno(Aluno aluno) {
+    alunosMatriculados.remove(aluno);
+  }
+
   public ArrayList<Aluno> confirmarTurma(LocalDate dataFinalMatricula){
     if(totalAlunos > MIN_Inscritos){
       if(LocalDate.now().compareTo(dataFinalMatricula) <= 0){
@@ -72,13 +76,16 @@ public class Disciplina{
         return alunosMatriculados;
       }
       else{
-        //Retorna mensagem de erro: Prazo expirado
+        //Retorna mensagem de erro:
+        System.out.println("Prazo expirado!");
         return null;
       }
     }
     else{
-      //Retorna mensagem de erro: Matrículas insuficientes
+      //Retorna mensagem de erro:
+      System.out.println("Matrículas insuficientes!"); 
       return null;
     }
   }
+
 }
