@@ -1,3 +1,4 @@
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Usuario {
@@ -20,6 +21,11 @@ public class Usuario {
     protected void setNome(String nome) { this.nome = nome; }
     protected void setOrigem(int origem) { this.origem = origem; }
     protected void setDisciplina(int disciplina) { this.disciplinas.add(disciplina); }
+
+    
+    public String toCsv (){
+        return (this.getMatricula() +  ";" + this.getSenha() +  ";" + this.getNome() +  ";" + this.getOrigem() +  ";" + this.getDisciplinas().stream().map(String::valueOf).collect(Collectors.joining(",")) + ";");
+    }
     
     /*
     public Usuario(int matricula, String senha, String nome, int origem) {
@@ -29,6 +35,15 @@ public class Usuario {
         this.origem = origem;
     }
     */
+
+    public Usuario(int matricula, String senha, String nome, int origem, ArrayList<Integer> disciplinas) {
+        this.matricula = matricula;
+        this.senha = senha;
+        this.nome = nome;
+        this.origem = origem;
+        this.disciplinas = disciplinas;
+    }
+    
 
     //Validação de login
     public int login (int matricula, String senha) {    
