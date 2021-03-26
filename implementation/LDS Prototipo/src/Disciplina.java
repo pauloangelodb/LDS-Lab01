@@ -1,5 +1,6 @@
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.stream.Collectors;
 
 public class Disciplina{
   private String nome;
@@ -23,6 +24,9 @@ public class Disciplina{
       this.vagas = MAX_Inscritos;
   }
 
+  public Disciplina() {
+  }
+
   public String getNome() { return nome; } 
   public boolean getOptativa() { return optativa; } 
 
@@ -42,6 +46,9 @@ public class Disciplina{
   public int getID() { return id; }
   public Professor getProf() { return professor; }
 
+  /*public String toCsv (){
+    return (this.getNome() +  ";" + this.getOptativa() +  ";" + this.getID() +  ";" + this.getProf() +  ";" + this.getAlunosMatriculados().stream().map(Void::valueOf).collect(Collectors.joining(",")) + ";");
+  }*/
 
   public void setNome(String nome) { this.nome = nome; }
   public void setOptativa(boolean optativa) { this.optativa = optativa; }
