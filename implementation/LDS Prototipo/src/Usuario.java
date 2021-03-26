@@ -1,8 +1,8 @@
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.stream.Collectors;
 
 public class Usuario {
-    
     
     private int matricula;              //Número de matrícula
     private String senha;               //Senha cadastrada pala login
@@ -27,14 +27,14 @@ public class Usuario {
         return (this.getMatricula() +  ";" + this.getSenha() +  ";" + this.getNome() +  ";" + this.getOrigem() +  ";" + this.getDisciplinas().stream().map(String::valueOf).collect(Collectors.joining(",")) + ";");
     }
     
-    /*
+    
     public Usuario(int matricula, String senha, String nome, int origem) {
         this.matricula = matricula;
         this.senha = senha;
         this.nome = nome;
         this.origem = origem;
     }
-    */
+    
 
     public Usuario(int matricula, String senha, String nome, int origem, ArrayList<Integer> disciplinas) {
         this.matricula = matricula;
@@ -44,6 +44,9 @@ public class Usuario {
         this.disciplinas = disciplinas;
     }
     
+
+    public Usuario() {
+    }
 
     //Validação de login
     public int login (int matricula, String senha) {    
