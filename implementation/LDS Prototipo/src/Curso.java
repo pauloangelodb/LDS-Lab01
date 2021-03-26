@@ -1,5 +1,6 @@
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.stream.Collectors;
 
 public class Curso{
   private String nome;
@@ -15,7 +16,17 @@ public class Curso{
     this.setID(id);
   }
 
-  public String getNome(){ return nome; }
+  public Curso(int id, String nome, int creditos, ArrayList<Disciplina> disciplinas){
+    this.setNome(nome);
+    this.setCreditos(creditos);
+    this.setID(id);
+    this.disciplinas = disciplinas;
+  }
+
+  public Curso() {
+}
+
+public String getNome(){ return nome; }
   public int getCreditos(){ return creditos; }
   public int getId(){ return id; }
   public LocalDate getInicioMatricula() { return inicioMatricula; }
@@ -25,6 +36,7 @@ public class Curso{
   public void setNome(String nome) { this.nome = nome; }
   public void setCreditos(int creditos) { this.creditos = creditos; }
   public void setID(int id) { this.id = id; }
+  protected void setDisciplina(Disciplina disciplina) { this.disciplinas.add(disciplina); }
 
   public boolean inserirDisciplina(Disciplina disciplina){
     return (disciplinas.add(disciplina));
@@ -38,6 +50,10 @@ public class Curso{
     else{ 
       //erro a data de inicio não pode ser posterior ao fim.
     }
+  }
+
+  public String toCsv (){
+    return (this.getNome() +  ";" + this.getCreditos() +  ";" + this.getId() +  ";" + this.getInicioMatricula() +  ";" +  this.getFimMatricula() +  ";" + this.getDisciplinas().stream().map(String::valueOf).collect(Collectors.joining(",")) + ";");
   }
 
   public void matricularAlunoDisciplina(Aluno aluno, int idDisciplina){
