@@ -8,7 +8,7 @@ public class Curso{
   private int id;
   private LocalDate inicioMatricula;
   private LocalDate fimMatricula;
-  private ArrayList<Disciplina> disciplinas;
+  private static ArrayList<Disciplina> disciplinas;
 
   public Curso(String nome, int creditos, int id){
     this.setNome(nome);
@@ -31,7 +31,7 @@ public String getNome(){ return nome; }
   public int getId(){ return id; }
   public LocalDate getInicioMatricula() { return inicioMatricula; }
   public LocalDate getFimMatricula() { return fimMatricula; }
-  public ArrayList<Disciplina> getDisciplinas(){ return disciplinas; }
+  public static ArrayList<Disciplina> getDisciplinas(){ return disciplinas; }
 
   public void setNome(String nome) { this.nome = nome; }
   public void setCreditos(int creditos) { this.creditos = creditos; }

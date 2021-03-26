@@ -76,6 +76,14 @@ public class Disciplina{
     alunosMatriculados.remove(aluno);
   }
 
+  public void inserirProfessor(Professor novoProfessor) {    
+    this.professor = novoProfessor;
+  }
+
+  public void removerProfessor() {
+    this.professor = null;
+  }
+
   public ArrayList<Aluno> confirmarTurma(LocalDate dataFinalMatricula){
     if(totalAlunos > MIN_Inscritos){
       if(LocalDate.now().compareTo(dataFinalMatricula) <= 0){

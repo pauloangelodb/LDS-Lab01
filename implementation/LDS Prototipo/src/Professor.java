@@ -13,8 +13,11 @@ public class Professor extends Usuario {
     }
 
     //Professor consulta os nomes dos alunos cadastrados em uma disciplina
-    public void consultar (Disciplina disciplina) {
-        disciplina.getAlunosMatriculados();
+    public void consultar (int matriculaDisciplina) {
+        for (Disciplina disciplina : disciplinasLecionadas) {
+            if (disciplina.getID() == matriculaDisciplina)
+                disciplina.getAlunosMatriculados();
+        }        
     }
 
     public void addDisciplinaLecionada(Disciplina disciplina){ 

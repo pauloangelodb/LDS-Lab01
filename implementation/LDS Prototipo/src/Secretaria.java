@@ -31,7 +31,10 @@ public class Secretaria extends Usuario{
         return false;
     }
     
-  public void removerCurso(Curso curso) {
-    semestre.remove(curso);
-  }
+    public void removerCurso(int idCurso) {
+        for (Curso curso : semestre) {
+            if (curso.getId() == idCurso)
+                semestre.remove(curso);
+        }
+    }
 }

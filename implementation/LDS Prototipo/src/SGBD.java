@@ -1,4 +1,10 @@
+<<<<<<< Updated upstream
 //import java.util.*;
+=======
+//import java.io.FileWriter;
+//import java.io.IOException;
+import java.util.*;
+>>>>>>> Stashed changes
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -9,12 +15,17 @@ public class SGBD {
     //private final static String arqUsuarios = "Usuario.txt";
 
 
-    public static void InserirUsuarios() {
+    public static void InserirUsuarios() throws IOException {
         File dir = new File("F:\\ESCOLA\\EAD\\Lab Soft\\LDS-Lab01\\implementation\\LDS Prototipo\\src");
         File arquivoUsuarios = new File(dir, "Usuarios.txt");
 
         try {
+<<<<<<< Updated upstream
             Usuario Usuario = new Usuario(1, "123", " Secretaria", 1, null);
+=======
+            Usuario Usuario = new Usuario();
+            //Usuario Usuario = new Usuario(1, "123", " Secretaria", 1);
+>>>>>>> Stashed changes
             //Usuario Usuario1 = new Usuario(2, "123", " Paulo", 3);
             //Usuario Usuario2 = new Usuario(3, "1234", "Guilherme", 3);
             //Usuario Usuario3 = new Usuario(4, "12345", "Lucas", 3);
@@ -25,8 +36,8 @@ public class SGBD {
             printWriter.print(Usuario.toCsv());
 
             printWriter.flush();
-
             printWriter.close();
+<<<<<<< Updated upstream
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -108,6 +119,11 @@ public class SGBD {
                 System.out.println(u.toString());
             }
         } catch (IOException e) {
+=======
+
+        } catch (IOException e) {
+            System.out.println("an arror occurred");
+>>>>>>> Stashed changes
             e.printStackTrace();
         }
     }

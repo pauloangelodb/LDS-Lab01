@@ -1,4 +1,4 @@
-import java.lang.reflect.Array;
+//import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.stream.Collectors;
 
@@ -36,14 +36,15 @@ public class Usuario {
     }
     
 
-    public Usuario(int matricula, String senha, String nome, int origem, ArrayList<Integer> disciplinas) {
+    /*
+    public Usuario (int matricula, String senha, String nome, int origem, ArrayList<Integer> disciplinas) {
         this.matricula = matricula;
         this.senha = senha;
         this.nome = nome;
         this.origem = origem;
         this.disciplinas = disciplinas;
     }
-    
+    */
 
     public Usuario() {
     }
